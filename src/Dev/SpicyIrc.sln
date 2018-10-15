@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpicyUser", "SpicyUser\SpicyUser.csproj", "{A00D6B6D-D805-4930-8700-FCDDBECA5917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpicyChat", "SpicyChat\SpicyChat.csproj", "{386CF1B4-A526-48C3-B5A4-D47F3A908312}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev", "Dev", "{BDCF68F6-FF98-434D-840C-65916ADD40C0}"
+	ProjectSection(SolutionItems) = preProject
+		SpicyClient\SpicyClient.cs = SpicyClient\SpicyClient.cs
+		SpicyClient\SpicyClient.Designer.cs = SpicyClient\SpicyClient.Designer.cs
+		SpicyClient\SpicyClient.resx = SpicyClient\SpicyClient.resx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{885130DA-593B-4154-976E-44B80A93E6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpicyChat.UnitTests", "..\Test\SpicyChat.UnitTests\SpicyChat.UnitTests.csproj", "{F23B23BD-AB3B-488A-A146-AF457E6EB3A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpicyClient", "SpicyClient\SpicyClient.csproj", "{0A45481B-C237-40A5-B02C-D3BA8630B001}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A00D6B6D-D805-4930-8700-FCDDBECA5917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00D6B6D-D805-4930-8700-FCDDBECA5917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00D6B6D-D805-4930-8700-FCDDBECA5917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00D6B6D-D805-4930-8700-FCDDBECA5917}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386CF1B4-A526-48C3-B5A4-D47F3A908312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386CF1B4-A526-48C3-B5A4-D47F3A908312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386CF1B4-A526-48C3-B5A4-D47F3A908312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386CF1B4-A526-48C3-B5A4-D47F3A908312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F23B23BD-AB3B-488A-A146-AF457E6EB3A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F23B23BD-AB3B-488A-A146-AF457E6EB3A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F23B23BD-AB3B-488A-A146-AF457E6EB3A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F23B23BD-AB3B-488A-A146-AF457E6EB3A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A45481B-C237-40A5-B02C-D3BA8630B001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A45481B-C237-40A5-B02C-D3BA8630B001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A45481B-C237-40A5-B02C-D3BA8630B001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A45481B-C237-40A5-B02C-D3BA8630B001}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A00D6B6D-D805-4930-8700-FCDDBECA5917} = {BDCF68F6-FF98-434D-840C-65916ADD40C0}
+		{386CF1B4-A526-48C3-B5A4-D47F3A908312} = {BDCF68F6-FF98-434D-840C-65916ADD40C0}
+		{F23B23BD-AB3B-488A-A146-AF457E6EB3A3} = {885130DA-593B-4154-976E-44B80A93E6BA}
+		{0A45481B-C237-40A5-B02C-D3BA8630B001} = {BDCF68F6-FF98-434D-840C-65916ADD40C0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD26C457-CB95-47C4-A4E5-CAAD22554671}
+	EndGlobalSection
+EndGlobal
