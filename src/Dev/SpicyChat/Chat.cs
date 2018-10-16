@@ -2,14 +2,10 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.Runtime.Serialization;
-    using SpicyUser;
 
     [DataContract]
-    public class SpicyChat
+    public class Chat
     {
         [DataMember]
         public List<string> MessagesToChatWindow = new List<string>();
@@ -20,7 +16,7 @@
             this.MessagesToChatWindow.Add($"{currentTime:HH:mm:ss} - {userName}: {message}");
         }
 
-        public IEnumerable<string> GetAllMessages()
+        public List<string> GetAllMessages()
         {
             return this.MessagesToChatWindow;
         }

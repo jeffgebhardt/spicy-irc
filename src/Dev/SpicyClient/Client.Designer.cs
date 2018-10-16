@@ -1,6 +1,6 @@
 ﻿namespace SpicyIrc.SpicyClient
 {
-    partial class SpicyClient
+    partial class Client
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@
             this.displayMessagesTxtBox.Size = new System.Drawing.Size(739, 349);
             this.displayMessagesTxtBox.TabIndex = 2;
             // 
-            // SpicyClient
+            // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -66,8 +66,8 @@
             this.Controls.Add(this.displayMessagesTxtBox);
             this.Controls.Add(this.sendTxtBox);
             this.Controls.Add(this.sendBtn);
-            this.Name = "SpicyClient";
-            this.Text = "Splicy IRC";
+            this.Name = "Client";
+            this.Text = "Spicy IRC";
             this.ResumeLayout(false);
             this.PerformLayout();
 

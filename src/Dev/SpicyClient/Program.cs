@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
+﻿
 namespace SpicyIrc.SpicyClient
 {
+using System;
+using System.Windows.Forms;
+
     static class Program
     {
         /// <summary>
@@ -16,7 +14,7 @@ namespace SpicyIrc.SpicyClient
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SpicyClient());
+            Application.Run(new Client());
         }
     }
 }

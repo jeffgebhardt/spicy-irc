@@ -8,11 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpicyChat", "SpicyChat\SpicyChat.csproj", "{386CF1B4-A526-48C3-B5A4-D47F3A908312}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dev", "Dev", "{BDCF68F6-FF98-434D-840C-65916ADD40C0}"
-	ProjectSection(SolutionItems) = preProject
-		SpicyClient\SpicyClient.cs = SpicyClient\SpicyClient.cs
-		SpicyClient\SpicyClient.Designer.cs = SpicyClient\SpicyClient.Designer.cs
-		SpicyClient\SpicyClient.resx = SpicyClient\SpicyClient.resx
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{885130DA-593B-4154-976E-44B80A93E6BA}"
 EndProject
