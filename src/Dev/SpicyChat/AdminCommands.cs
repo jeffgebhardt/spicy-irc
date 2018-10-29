@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using SpicyIrc.SpicyUser;
 
-class AdminCommands
+    class AdminCommands
     {
         public void DisplayMenu()
         {

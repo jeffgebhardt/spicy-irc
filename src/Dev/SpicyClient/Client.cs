@@ -1,20 +1,22 @@
-﻿
-namespace SpicyIrc.SpicyClient
+﻿namespace SpicyIrc.SpicyClient
 {
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using SpicyIrc.SpicyChat;
+    using System;
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+    using SpicyIrc.SpicyChat; 
 
     public partial class Client : Form
     {
         public Chat Chat;
+        public NetworkCommands NetworkCommands;
 
         public Client()
         {
             InitializeComponent();
 
             this.Chat = new Chat();
+            this.NetworkCommands = new NetworkCommands();
+            
         }
 
         private void sendBtn_Click(object sender, EventArgs e)
@@ -35,6 +37,11 @@ using SpicyIrc.SpicyChat;
             {
                displayMessagesTxtBox.AppendText(message + Environment.NewLine);
             }
+        }
+
+        private void connectButton_Click(object sender, EventArgs e)
+        {
+            NetworkCommands.ConnectToServer();
         }
     }
 }

@@ -31,6 +31,7 @@
             this.sendBtn = new System.Windows.Forms.Button();
             this.sendTxtBox = new System.Windows.Forms.TextBox();
             this.displayMessagesTxtBox = new System.Windows.Forms.TextBox();
+            this.connectButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sendBtn
@@ -52,17 +53,28 @@
             // 
             // displayMessagesTxtBox
             // 
-            this.displayMessagesTxtBox.Location = new System.Drawing.Point(36, 21);
+            this.displayMessagesTxtBox.Location = new System.Drawing.Point(36, 68);
             this.displayMessagesTxtBox.Multiline = true;
             this.displayMessagesTxtBox.Name = "displayMessagesTxtBox";
-            this.displayMessagesTxtBox.Size = new System.Drawing.Size(739, 349);
+            this.displayMessagesTxtBox.Size = new System.Drawing.Size(739, 302);
             this.displayMessagesTxtBox.TabIndex = 2;
+            // 
+            // connectButton
+            // 
+            this.connectButton.Location = new System.Drawing.Point(36, 13);
+            this.connectButton.Name = "connectButton";
+            this.connectButton.Size = new System.Drawing.Size(121, 39);
+            this.connectButton.TabIndex = 3;
+            this.connectButton.Text = "Connect";
+            this.connectButton.UseVisualStyleBackColor = true;
+            this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
             // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.connectButton);
             this.Controls.Add(this.displayMessagesTxtBox);
             this.Controls.Add(this.sendTxtBox);
             this.Controls.Add(this.sendBtn);
@@ -78,6 +90,7 @@
         private System.Windows.Forms.Button sendBtn;
         private System.Windows.Forms.TextBox sendTxtBox;
         private System.Windows.Forms.TextBox displayMessagesTxtBox;
+        private System.Windows.Forms.Button connectButton;
     }
 }
 
