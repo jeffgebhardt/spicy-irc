@@ -7,41 +7,32 @@
 
     public partial class Client : Form
     {
-        public Chat Chat;
         public NetworkCommands NetworkCommands;
 
         public Client()
         {
             InitializeComponent();
 
-            this.Chat = new Chat();
-            this.NetworkCommands = new NetworkCommands();
-            
+            this.NetworkCommands = new NetworkCommands();           
         }
 
         private void sendBtn_Click(object sender, EventArgs e)
         {
-            displayMessagesTxtBox.Clear();
-
-            Chat.AddMessage("Jeff", sendTxtBox.Text);
+            this.NetworkCommands.Send(sendTxtBox.Text);
             sendTxtBox.Clear();
+        }
+        private void connectBtn_Click(object sender, EventArgs e)
+        {
+            string serverName = "irc.freenode.net" ?? ircServerNameTxtBox.Text;
+            string serverPortNumber = "6667" ?? ircServerPortNumberTxtBox.Text;
+            int serverPortNumberParsed = Int16.Parse(serverPortNumber);
 
-            List<string> allMessages = Chat.GetAllMessages();
-
-            DisplayMessages();
+            this.NetworkCommands.ConnectToServer(serverName, serverPortNumberParsed);
         }
 
-        private void DisplayMessages()
+        public void DisplayMessage(string message)
         {
-            foreach (var message in Chat.MessagesToChatWindow)
-            {
-               displayMessagesTxtBox.AppendText(message + Environment.NewLine);
-            }
-        }
-
-        private void connectButton_Click(object sender, EventArgs e)
-        {
-            NetworkCommands.ConnectToServer();
+            displayMessagesTxtBox.AppendText(message + Environment.NewLine);
         }
     }
 }

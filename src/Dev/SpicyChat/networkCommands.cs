@@ -9,26 +9,60 @@
 
     public class NetworkCommands
     {
-        public void ConnectToServer()
-        {
-            NetworkStream stream;
-            StreamReader reader;
+        private string _inputLine;
 
+        private Stream _stream;
+
+        private StreamReader _reader;
+
+        private StreamWriter _writer;
+
+        public void ConnectToServer(string server, int port)
+        {
             try
             {
-                TcpClient tcpClient = new TcpClient("irc.freenode.net", 6667);
+                TcpClient tcpClient = new TcpClient(server, port);
 
-                stream = tcpClient.GetStream();
-                reader = new StreamReader(stream);              
-
-                reader.Close();
-                tcpClient.Close();
+                _stream = tcpClient.GetStream();
+                _reader = new StreamReader(_stream);
+                _writer = new StreamWriter(_stream);
+                
+                Listen();
             }
             catch (Exception e)
             {
                 Console.WriteLine(e);
                 throw;
             }
+        }
+
+        private void Listen()
+        {
+            while ((_inputLine = _reader.ReadLine()) != null)
+            {
+                Console.WriteLine(_inputLine);
+            }
+        }
+
+        public void Send(string message)
+        {
+            _writer.WriteLine(message);
+            _writer.Flush();
+        }
+
+        public void DisplayMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetNickName()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void JoinChannel()
+        {
+            throw new NotImplementedException();
         }
     }
 }
